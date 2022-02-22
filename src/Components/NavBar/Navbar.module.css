@@ -1,0 +1,144 @@
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* height: 100px; */
+}
+.nav_left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+
+}
+.nav_right{
+    padding-right: 1rem;
+}
+
+.nav_right_wallet{
+    width: fit-content;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    background-color: transparent;
+}
+.nav_right_wallet:hover {
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.2), 0 6px 10px 0 rgba(255, 255, 255, 0.3);  
+  }
+  .ripple{
+    position: relative;
+    overflow: hidden; 
+  }
+
+  .ripple:before {
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    content:'';
+    position: absolute;
+    top: 50%; left: 50%;
+    width:0; height:0;
+  }
+  .ripple:focus:before {
+    transition: all 0.5s ease-out;
+    opacity:0;
+    width:160px;
+    height:160px;
+    margin-top:-80px;
+    margin-left:-80px;
+  }
+
+.navbar_items{
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    
+}
+.navbar_items:hover{
+    color: rgb(60, 126, 98);
+}
+.navbar_Hamburger{
+    display: none;
+}
+.navItems_small{
+    display: none;
+}
+.selected{
+    background-color: #000;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+.non_decoration{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 905px   ) {
+    .navbar{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 0rem 1rem;  
+
+        column-gap: 5%;
+        height: 50px;
+    }
+    .nav{
+        display: none;
+    }
+   
+    .navbar_Hamburger{
+        display: block;
+    }
+   
+    .navItems_small{
+        z-index: 99;
+        display: block;
+        position: absolute;
+        top: 0;
+        background: rgba(128,128,128, 0.9);
+height: 100vh;
+        width: 100vw;
+       
+    }
+    @keyframes slidein {
+        from {
+          opacity: 0;
+        }
+      
+        to {
+         opacity: 1;
+        }
+      }
+     
+      .annimate{
+        animation-name: slidein;
+        animation-duration: 1s;
+
+      }
+    .navbar_items_small{
+        padding: 10px 20px !important;
+        cursor: pointer;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+        font-weight: bold;
+        color: black;
+        text-decoration: inherit !important;
+        
+
+    }
+    .navbar_items_small:hover{
+        padding: 10px 20px !important;
+        background-color: grey;
+    }
+    .navItems_small_close{
+        display:flex;
+        justify-content: flex-end;
+        padding: 10px 20px;
+    }
+    
+}

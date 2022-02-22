@@ -1,0 +1,27 @@
+.mainDiv{
+    background-image: url("../../assets/background.jpg");
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navBar{
+    height:8%
+}
+.pageContent{
+    height:92%
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .mainDiv{
+        background-image: url("../../assets/bg_mobile.jpg");
+    }
+    
+}
